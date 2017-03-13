@@ -1,5 +1,5 @@
 {
-  "name": "logIt",
+  "name": "orz-logit",
   "version": "0.5.0",
   "description": "A colorful logging utility for Node.js application debug",
   "main": "index.js",

@@ -17,7 +17,7 @@ $ npm install
 ```javascript
 const { LogIt, ErrorIt } = require('logIt');
 ```
-#### 2. Define the debug flag, title, mark and color:
+#### 2. Define the debug flag, title, mark and color (you can also set 'len' to change the length of repeating marks, default is 60):
 ```javascript
 const logIt = LogIt(true, { title: 'Test', mark:'=', color:'green' });
 ```
