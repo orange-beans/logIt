@@ -3,13 +3,9 @@ A colorful logging utility to help you with Node.js application debugging
 ![alt tag](example/testing.PNG)
 
 ## To Install
-#### Clone into a local folder:
+#### Use npm:
 ```bash
-$ git clone https://github.com/orange-beans/beans-reduxed-vicia
-```
-#### Then install dependent modules:
-```bash
-$ npm install
+$ npm install orz-logit
 ```
 
 ## To Use
