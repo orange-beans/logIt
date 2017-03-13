@@ -1,6 +1,6 @@
 ## logIt
 A colorful logging utility to help you with Node.js application debugging
-![alt tag](example/testing.png)
+![alt tag](example/testing.PNG)
 
 ## To Install
 #### Clone into a local folder:
