@@ -7,6 +7,10 @@ process.stdout.isTTY = true;
 //TODO: publish as a npm module later;
 const DEBUG = true;
 const colors = require('colors/safe');
+const paddingZero = require('./padding');
+
+// A counter as tracking number
+let trackingNumber = 0;
 
 // Logit for per-module usage
 // Colors include
@@ -21,11 +25,17 @@ function LogIt(_debug_flag = true, _settings = {}) {
   const mark  = _settings.mark || '';
   const len = _settings.len || 60;
   const rep = len - title.length;
+  const padding = _settings.padding || 4;
 
-  const premark = colors[color](title + Array(rep).join(mark) + '\n');
+  const premark = colors[color](title + Array(rep).join(mark));
+
   return function (...args) {
     if (!debug_flag) return;
-    Array.prototype.unshift.call(args, premark);
+
+    const track_number = colors['gray'](paddingZero(++trackingNumber, padding));
+    //const premark = colors[color](track_number + ' ' + title + Array(rep).join(mark));
+
+    Array.prototype.unshift.call(args, track_number + ' ' + premark + '\n');
     // REVIEW: colors cannot print object
     // temp solution: stringfy arg if it's an object
     args = args.map((arg) => {

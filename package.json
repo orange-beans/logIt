@@ -1,6 +1,6 @@
 {
   "name": "orz-logit",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "A colorful logging utility for Node.js application debug",
   "main": "index.js",
   "dependencies": {
